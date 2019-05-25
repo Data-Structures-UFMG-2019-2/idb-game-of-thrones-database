@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS feudal_society;
-USE feudal_society
+CREATE DATABASE IF NOT EXISTS a_game_of_thrones;
+USE a_game_of_thrones
 
 -- Create kingdom
 CREATE TABLE IF NOT EXISTS kingdoms (

@@ -1,4 +1,4 @@
-USE feudal_society
+USE a_game_of_thrones
 
 -- KINGDOMS
 INSERT INTO kingdoms (id, name)
@@ -10,7 +10,7 @@ VALUES
 -- REGIONS
 INSERT INTO regions (id, kingdom_id, name, climate, stretch)
 VALUES
-  (1, 3, "North", "Cold and harsh in winter and occasionally it will snow in summer", 1367942),
+  (1, 3, "North", "Cold and harsh in winter and frequently it will snow in summer", 1367942),
   (2, 1, "Iron Islands", "Oceanic climate with mild summers and mild winters and a relatively narrow annual temperature range and few extremes of temperature", NULL)
   (3, 1, "Riverlands", "Humid continental climate with large seasonal temperature differences", NULL),
   (4, 1, "The Vale", "Subartic climate with long, usually very cold winters, and short, cool to mild summers", NULL),
@@ -20,7 +20,7 @@ VALUES
   (8, 1, "Crownlands", "Humid continental climate with large seasonal temperature differences", NULL),
   (9, 1, "Dorne", "Hot desert climate, hot, sunny and dry year-round", NULL),
   (10, 2, "Beyond the Wall", "Ice cap polar climate where no mean monthly temperature exceeds 0 °C", NULL),
-  (11, 3, "The Gift", "Cold and harsh in winter and occasionally it will snow in summer", NULL);
+  (11, 3, "The Gift", "Cold and harsh in winter and frequently it will snow in summer", NULL);
 
 -- HOUSES
 INSERT INTO houses (id, name, symbol, colors, words)
@@ -69,4 +69,6 @@ VALUES
   (10, 9, 8, "Catelyn Tully", 0, "f",
     "Lady of Winterfell and mother of five children, Lady Catelyn went south with her son, King Robb Stark, during the war of the five kings after her husband, Eddard (Ned) Stark was made prisioner in King's Landing. Catelyn was accused of treachery by some northerners lords after she set Jaime Lannister (the kingslayer), King Robb's prisioner, free in an attempt to rescue her daughters from the capital. Lady Catelyn was killed by Raymund Frey in the night that is known as the Red Wedding at the Twins."),
   (11, 10, 3, 1, "Robb Stark", 0, "m",
-    "King in the North and lord of Winterfell during the war of the five kings, Robb Stark was the elder son of Eddard (Ned) Stark. Robb raised his banners and marched south with the armies of the north to wage war against the capital after his father was accused of treachery against the crown. After Ned's execution, Robb was named King in the North by the northerners lords. King Robb was betrayed and killed by Roose Bolton in the night that is known as the Red Wedding at the Twins.")
+    "King in the North and lord of Winterfell during the war of the five kings, Robb Stark was the elder son of Eddard (Ned) Stark. Robb raised his banners and marched south with the armies of the north to wage war against the capital after his father was accused of treachery against the crown. After Ned's execution, Robb was named King in the North by the northerners lords. King Robb was betrayed and killed by Roose Bolton in the night that is known as the Red Wedding at the Twins."),
+  (12, 10, 3, 1, "Sansa Stark", 1, "f",
+    "Queen in the North and lady of Winterfell, Sansa Stark is the elder daughter of Eddard (Ned) Stark. As a child, she was sent to King's Landing to marry King Joffrey, however, the marriage fell appart when her father was accused of treachery against the crown, she's been then married to Lord Tyrion Lannister. After King Joffrey's murder, Sansa was reportedly disappeared from King's Landing and lather found under the protection of the lords of the vale. She was sent back to her home at Winterfell and married to Ramsey Bolton, the new lord of Winterfell. During the battle where King Stannis Baratheon attacked Winterfell to take it back in the name of the house Stark, sansa was once again reported as missing and later joined her cousin, Jon Snow at Castle Black. After the battle of the bastards where Jon Snow retrieves Winterfell from the Boltons and id named King in the North, Sansa is left as Lady of Winterfell in his absence. Afther the last war, when Queen Daenerys is murdered by Jon Snow and Bran Stark is named King of the six kingdoms the North becames a independent kingdom and Sansa is named Queen in the North.")

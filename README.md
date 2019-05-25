@@ -1,6 +1,7 @@
 # Game of Thrones Database
 
 A simple set of scripts that generates a Game of Thrones populated MySql database.
+
 **WARNING: IT MAY CONTAIN SPOILERS TO THE GAME OF THRONES HBO'S TV SERIES**
 
 #### About the data
