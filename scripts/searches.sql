@@ -26,6 +26,18 @@ ON inheritances.noble_id = nobles.id
 JOIN houses
 ON houses.id = inheritances.house_id;
 
+-- Get the name, symbol, colors, words and number of members of each house
+SELECT houses.name, houses.symbol, houses.colors, houses.words, count(people.id) AS members
+FROM houses
+LEFT JOIN inheritances
+ON inheritances.house_id = houses.id
+LEFT JOIN nobles
+ON nobles.id = inheritances.noble_id
+JOIN people
+ON nobles.person_id = people.id
+GROUP BY houses.id
+ORDER BY members DESC;
+
 -- Get alive people
 SELECT people.id, people.name, people.gender, regions.name AS region
 FROM people
@@ -81,3 +93,30 @@ LEFT JOIN people
 ON people.id = nobles.person_id
 WHERE lords_castles.is_current_ruler = 1
 ORDER BY castle_name;
+
+-- Get every king and the kingdom he ruled
+SELECT people.name AS king_name, kingdoms.name AS kingdom_name
+FROM kingdoms
+JOIN reigns
+ON kingdoms.id = reigns.kingdom_id
+JOIN kings
+ON kings.id = reigns.king_id
+JOIN nobles
+ON kings.noble_id = nobles.id
+JOIN people
+ON nobles.person_id = people.id
+ORDER BY kingdom_name;
+
+-- Get the current king of each kingdom
+SELECT people.name AS king_name, kingdoms.name AS kingdom_name
+FROM kingdoms
+JOIN reigns
+ON kingdoms.id = reigns.kingdom_id
+JOIN kings
+ON kings.id = reigns.king_id
+JOIN nobles
+ON kings.noble_id = nobles.id
+JOIN people
+ON nobles.person_id = people.id
+WHERE reigns.is_current_ruler = 1
+ORDER BY kingdom_name;

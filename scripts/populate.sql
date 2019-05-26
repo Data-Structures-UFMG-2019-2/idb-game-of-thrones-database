@@ -26,13 +26,13 @@ VALUES
 INSERT INTO houses (id, name, symbol, colors, words)
 VALUES
   (1, "Stark", "Direwolf", "Grey and White", "Winter is coming"),
-  (2, "Lannister", "Lion", "Red and Yellow", "Hear me roar"),
+  (2, "Lannister", "Lion", "Red and Golden", "Hear me roar"),
   (3, "Targaryen", "Three-headed Dragon", "Red and Black", "Fire and blood"),
-  (4, "Baratheon", "Deer", "Yellow and Black", "Ours is the fury"),
+  (4, "Baratheon", "Deer", "Golden and Black", "Ours is the fury"),
   (5, "Tyrell", "Flower", "Golden and Green", "Growing strong"),
   (6, "Bolton", "Flayed Man", "Red and Pink", "Our blades are sharp"),
   (7, "Arryn", "Falcon and a Moon", "Blue and White", "As high as honor"),
-  (8, "Clegane", "Three Dogs", "Black and Yellow", "<Not yet known>"),
+  (8, "Clegane", "Three Dogs", "Black and Golden", "<Not yet known>"),
   (9, "Greyjoy", "Kraken", "Golden and Black", "We do not sow"),
   (10, "Manderly", "Merman", "Blue and Green", "<Not yet known>"),
   (11, "Hornwood", "Bullmoose", "Brown and Orange", "Righteous in wrath"),
