@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS regions (
   id INT NOT NULL AUTO_INCREMENT,
   kingdom_id INT NOT NULL,
   name VARCHAR(255) NOT NULL,
-  climate VARCHAR(255),
-  stretch INT NOT NULL,
+  climate VARCHAR(516),
+  stretch INT,
   PRIMARY KEY (id),
   CONSTRAINT fk_region_kingdom FOREIGN KEY (kingdom_id)
   REFERENCES kingdoms(id)
