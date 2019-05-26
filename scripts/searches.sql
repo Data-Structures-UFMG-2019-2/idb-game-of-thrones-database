@@ -34,7 +34,7 @@ ON people.region_id = regions.id
 WHERE people.is_alive = 1;
 
 -- Get every married couple and their number of sons
-SELECT husbands.name, wives.name, count(children.id) AS children_number
+SELECT husbands.name AS father_name, wives.name AS mother_name, count(children.id) AS children_number
 FROM (
   SELECT people.id, people.name, marriages.wife_id
   FROM people

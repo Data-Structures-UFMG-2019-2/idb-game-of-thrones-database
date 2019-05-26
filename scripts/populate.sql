@@ -291,3 +291,23 @@ VALUES
   (93, 3), (93, 19);
 
 -- Castles
+INSERT INTO castles (id, region_id, name)
+VALUES
+  (1, 1, "Winterfell"),
+  (2, 3, "Riverrun"),
+  (3, 8, "Dragonstone"),
+  (4, 5, "Casterly Rock"),
+  (5, 7, "Storm's End"),
+  (6, 6, "Highgarden"),
+  (7, 3, "The Twins"),
+  (8, 3, "Harenhall"),
+  (9, 1, "Dreadfort"),
+  (10, 4, "The Eyrie"),
+  (11, 2, "Pyke"),
+  (12, 1, "Mormont Keep"),
+  (13, 6, "Horn Hill"),
+  (14, 9, "Sunspear"),
+  (15, 11, "Castle Black"),
+  (16, 11, "Eastwatch By-the-sea"),
+  (17, 6, "Hightower"),
+  (12, 8, "Red Keep");
