@@ -101,7 +101,7 @@ CREATE TABLE IF NOT EXISTS inheritances (
 CREATE TABLE IF NOT EXISTS kings (
   id INT NOT NULL AUTO_INCREMENT,
   noble_id INT NOT NULL,
-  heir_id INT NOT NULL,
+  heir_id INT,
   PRIMARY KEY(id),
   CONSTRAINT fk_king_noble FOREIGN KEY (noble_id)
   REFERENCES nobles(id),
@@ -116,7 +116,7 @@ ON kings(noble_id);
 CREATE TABLE IF NOT EXISTS lords (
   id INT NOT NULL AUTO_INCREMENT,
   noble_id INT NOT NULL,
-  heir_id INT NOT NULL,
+  heir_id INT,
   PRIMARY KEY(id),
   CONSTRAINT fk_lord_noble FOREIGN KEY (noble_id)
   REFERENCES nobles(id),
@@ -165,7 +165,7 @@ CREATE TABLE IF NOT EXISTS reigns (
   id INT NOT NULL AUTO_INCREMENT,
   king_id INT NOT NULL,
   kingdom_id INT NOT NULL,
-  rule_begin_date DATE NOT NULL,
+  rule_begin_date DATE,
   rule_end_date DATE,
   is_current_ruler BOOLEAN NOT NULL,
   PRIMARY KEY (id),

@@ -3,7 +3,7 @@ USE a_game_of_thrones
 -- KINGDOMS
 INSERT INTO kingdoms (id, name)
 VALUES
-  (1, "Westeros"),
+  (1, "Six Kingdoms"),
   (2, "Wildlands"),
   (3, "The North");
 
@@ -153,6 +153,29 @@ VALUES
   (96, 94, 90, 9, "Nymeria Sand", 0, "f", ""),
   (97, 94, 90, 9, "Tyene Sand", 0, "f", "");
 
+-- CASTLES
+INSERT INTO castles (id, region_id, name)
+VALUES
+  (1, 1, "Winterfell"),
+  (2, 3, "Riverrun"),
+  (3, 8, "Dragonstone"),
+  (4, 5, "Casterly Rock"),
+  (5, 7, "Storm's End"),
+  (6, 6, "Highgarden"),
+  (7, 3, "The Twins"),
+  (8, 3, "Harenhall"),
+  (9, 1, "Dreadfort"),
+  (10, 4, "The Eyrie"),
+  (11, 2, "Pyke"),
+  (12, 1, "Mormont Keep"),
+  (13, 6, "Horn Hill"),
+  (14, 9, "Sunspear"),
+  (15, 11, "Castle Black"),
+  (16, 11, "Eastwatch By-the-sea"),
+  (17, 6, "Hightower"),
+  (18, 8, "Red Keep");
+
+-- MARRIAGES
 INSERT INTO marriages (husband_id, wife_id, still_married)
 VALUES
   (3, 10, 1),
@@ -179,7 +202,7 @@ VALUES
   (78, 81, 0),
   (82, 83, 1);
 
-
+-- NOBLES
 INSERT INTO nobles (id, person_id)
 VALUES
   (1, 1), (2, 2), (3, 3), (4, 4), (5, 5), (6, 6), (7, 7), (8, 8), (9, 9), (10, 10),
@@ -193,6 +216,76 @@ VALUES
   (81, 81), (82, 82), (83, 83), (84, 84), (85, 85), (86, 86), (87, 87), (88, 88), (89, 89), (90, 90),
   (91, 91), (92, 92), (93, 93);
 
+-- LORDS
+INSERT INTO lords (id, noble_id, heir_id)
+VALUES
+  (1, 1, 2),
+  (2, 2, 3),
+  (3, 3, 11),
+  (4, 11, 13),
+  (5, 13, 12),
+  (6, 12, NULL)
+  (7, 8, 58),
+  (8, 58, 60),
+  (9, 60, NULL),
+  (10, 16, 17),
+  (11, 17, 19),
+  (12, 19, 20),
+  (13, 20, 21),
+  (14, 21, 22),
+  (15, 22, NULL)
+  (16, 25, 26),
+  (17, 26, 30),
+  (18, 30, 28),
+  (19, 28, 31),
+  (20, 31, NULL),
+  (21, 36, 38),
+  (22, 39, 40),
+  (23, 40, NULL),
+  (24, 41, NULL),
+  (25, 82, 86),
+  (26, 86, 85),
+  (27, 85, NULL)
+  (28, 45, 47),
+  (29, 47, 50),
+  (30, 50, NULL),
+  (31, 51, 52),
+  (32, 52, 53),
+  (33, 53, 54),
+  (34, 54, NULL),
+  (35, 56, 57),
+  (36, 57, NULL),
+  (37, 62, 63),
+  (38, 63, 66),
+  (39, 66, NULL),
+  (40, 79, 65),
+  (41, 65, 66),
+  (42, 66, NULL),
+  (43, 79, 80),
+  (44, 80, NULL),
+  (45, 77, NULL),
+  (46, 24, NULL),
+  (47, 38, 33),
+  (48, 33, 35),
+  (49, 35, NULL);
+
+-- KINGS
+INSERT INTO kings (id, noble_id, heir_id)
+VALUES
+  (1, 38, 33),
+  (2, 33, 35),
+  (3, 35, NULL),
+  (4, 11, NULL),
+  (5, 12, NULL),
+  (6, 16, 17),
+  (7, 17, 21),
+  (8, 24, NULL),
+  (9, 39, NULL),
+  (10, 40, NULL),
+  (11, 23, NULL),
+  (12, 13, NULL);
+
+-- INHERITANCES
 INSERT INTO inheritances (noble_id, house_id)
 VALUES
   (1, 1),
@@ -290,24 +383,18 @@ VALUES
   (92, 3), (92, 19),
   (93, 3), (93, 19);
 
--- Castles
-INSERT INTO castles (id, region_id, name)
+-- REIGNS
+INSERT INTO reigns (id, king_id, kingdom_id, is_current_ruler)
 VALUES
-  (1, 1, "Winterfell"),
-  (2, 3, "Riverrun"),
-  (3, 8, "Dragonstone"),
-  (4, 5, "Casterly Rock"),
-  (5, 7, "Storm's End"),
-  (6, 6, "Highgarden"),
-  (7, 3, "The Twins"),
-  (8, 3, "Harenhall"),
-  (9, 1, "Dreadfort"),
-  (10, 4, "The Eyrie"),
-  (11, 2, "Pyke"),
-  (12, 1, "Mormont Keep"),
-  (13, 6, "Horn Hill"),
-  (14, 9, "Sunspear"),
-  (15, 11, "Castle Black"),
-  (16, 11, "Eastwatch By-the-sea"),
-  (17, 6, "Hightower"),
-  (12, 8, "Red Keep");
+  (1, 1, 1, 0),
+  (2, 2, 1, 0),
+  (3, 3, 1, 0),
+  (4, 11, 3, 0),
+  (5, 12, 3, 1),
+  (6, 16, 1, 0),
+  (7, 17, 1, 0),
+  (8, 24, 3, 0),
+  (9, 39, 1, 0),
+  (10, 40, 1, 0),
+  (11, 23, 1, 0),
+  (12, 13, 1, 1);
