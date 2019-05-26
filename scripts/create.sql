@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS lords_castles (
   id INT NOT NULL AUTO_INCREMENT,
   lord_id INT NOT NULL,
   castle_id INT NOT NULL,
-  rule_begin_date DATE NOT NULL,
+  rule_begin_date DATE,
   rule_end_date DATE,
   is_current_ruler BOOLEAN NOT NULL,
   PRIMARY KEY(id),

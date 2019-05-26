@@ -54,3 +54,30 @@ LEFT JOIN (
 ) AS children
 ON children.father_id = husbands.id AND children.mother_id = wives.id
 GROUP BY husbands.id, wives.id;
+
+-- Get each castle every lord has ruled
+SELECT lords_castles.id, people.name AS lord_name, castles.name AS castle_name, lords_castles.is_current_ruler AS current_ruler
+FROM people
+LEFT JOIN nobles
+ON nobles.person_id = people.id
+LEFT JOIN lords
+ON lords.noble_id = nobles.id
+JOIN lords_castles
+ON lords_castles.lord_id = lords.id
+JOIN castles
+ON lords_castles.castle_id = castles.id
+ORDER BY castle_name;
+
+-- Get the current lord of each castle
+SELECT people.name AS lord_name, castles.name AS castle_name
+FROM castles
+LEFT JOIN lords_castles
+ON lords_castles.castle_id = castles.id
+LEFT JOIN lords
+ON lords.id = lords_castles.lord_id
+LEFT JOIN nobles
+ON nobles.id = lords.noble_id
+LEFT JOIN people
+ON people.id = nobles.person_id
+WHERE lords_castles.is_current_ruler = 1
+ORDER BY castle_name;
