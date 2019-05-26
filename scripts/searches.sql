@@ -25,3 +25,32 @@ LEFT JOIN inheritances
 ON inheritances.noble_id = nobles.id
 JOIN houses
 ON houses.id = inheritances.house_id;
+
+-- Get alive people
+SELECT people.id, people.name, people.gender, regions.name AS region
+FROM people
+JOIN regions
+ON people.region_id = regions.id
+WHERE people.is_alive = 1;
+
+-- Get every married couple and their number of sons
+SELECT husbands.name, wives.name, count(children.id) AS children_number
+FROM (
+  SELECT people.id, people.name, marriages.wife_id
+  FROM people
+  JOIN marriages
+  ON marriages.husband_id = people.id
+) AS husbands
+JOIN (
+  SELECT people.id, people.name, marriages.husband_id
+  FROM people
+  JOIN marriages
+  ON marriages.wife_id = people.id
+) AS wives
+ON wives.husband_id = husbands.id
+LEFT JOIN (
+  SELECT people.id, people.father_id, people.mother_id
+  FROM people
+) AS children
+ON children.father_id = husbands.id AND children.mother_id = wives.id
+GROUP BY husbands.id, wives.id;

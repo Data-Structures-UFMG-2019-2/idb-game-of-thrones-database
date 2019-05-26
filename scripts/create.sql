@@ -41,6 +41,18 @@ CREATE TABLE IF NOT EXISTS people (
   REFERENCES regions(id)
 );
 
+-- Create marriages
+CREATE TABLE IF NOT EXISTS marriages (
+  husband_id INT NOT NULL,
+  wife_id INT NOT NULL,
+  still_married BOOLEAN NOT NULL DEFAULT 1,
+  PRIMARY KEY(husband_id, wife_id),
+  CONSTRAINT fk_marriage_husband FOREIGN KEY (husband_id)
+  REFERENCES people(id),
+  CONSTRAINT fk_marriage_wife FOREIGN KEY (wife_id)
+  REFERENCES people(id)
+);
+
 -- Create noble
 CREATE TABLE IF NOT EXISTS nobles (
   id INT NOT NULL AUTO_INCREMENT,

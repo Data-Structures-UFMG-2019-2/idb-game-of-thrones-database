@@ -4,7 +4,7 @@ A simple set of scripts that generates a Game of Thrones populated MySql databas
 
 **WARNING: IT MAY CONTAIN SPOILERS TO THE GAME OF THRONES HBO'S TV SERIES**
 
-#### About the data
+### About the data
 
 This is an unofficial database with educational purposes, the data is not complete and may not be accurate at some points.
 
