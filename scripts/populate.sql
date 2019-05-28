@@ -50,7 +50,8 @@ VALUES
   (23, "Estermont", "Sea Turtle", "Green and White", "<Not yet known>"),
   (24, "Florent", "Fox and Flowers", "Red and Blue", "<Not yet known>"),
   (25, "Hightower", "Tower in Flames", "White and Grey", "We light the way"),
-  (26, "Harlaw", "Scythe", "Black and White", "<Not yet known>");
+  (26, "Harlaw", "Scythe", "Black and White", "<Not yet known>"),
+  (27, "Jonas", "J and B letters", "Black and Golden", "Cause I'm burnin' up, burnin' up");
 
 -- PEOPLE
 INSERT INTO people (id, mother_id, father_id, region_id, name, is_alive, gender, biography)
@@ -78,9 +79,9 @@ VALUES
   (21, 18, 17, 6, "Rhaegar Targaryen", 0, "m", "The heir to the throne of the seven kingdoms, Rhaegar Targaryen, son of the mad king, was often described as kind and talented. Rhaegar supposedly kidnaped Lyanna Stark which (among other reasons) lead to North to rebel against the crown. Rhaegar was killed in combat by Robert Baratheon. Many years later, documents from the citadel proved that Rhaegar did not kidnaped Lyanna, they were infact in love and ran away together to get married in a secret ceremony in Dorne, from their union Jon Snow (which initialy was to be named Aegon Targaryen) was born."),
   (22, 18, 17, 6, "Viserys Targaryen", 0, "m", "After his family was defeated in the Robert rebellion and exiled from Westeros, Viserys and his younger sister Daenerys ran away to Essos, where they spent most of their childhood. Years later, plainning to retake the seven kingdoms, Viserys made a deal with a Dothraki tribe, but afther an disagreement the leader of the tribe, Khal Drogo killed Viserys with melted gold."),
   (23, 18, 17, 6, "Daenerys Targaryen", 0, "f", "After his family was defeated in the Robert rebellion and exiled from Westeros, Daenerys and his brother Viserys ran away to Essos, where they spent most of their childhood. Afther his brother made a deal with a Dothraki tribe, where the Dothraki would provide Viserys an army in exchange for Daenerys marrying Khal Drogo, the Dothraki leader. During the wedding ceremony, Daenerys is presented with three petrified dragon eggs, however, after Viserys and Drogo die, Daenerys walks into a pyre with the eggs and walks out unburnt and with three baby dragons, granting her the titles 'the unburnt' and 'mother of dragons'. Daenerys then traces her way around Essos liberating slaves, promoting peace and freedom and at some point she becames Queen of the city of Mereen. When she decides to sail back to Westeros, now with three fully grown dragons, Daenerys meets Jon Snow whom tells her about the long night and asks her for help. Daenerys then wages war against the White Walkers, this war, called 'the great war' costs her two of her dragons and a great percentage of her men. Daenerys then aknowledges that Jon is actually a Targaryen and by the laws of Westeros has a better claim to the throne than  she does, this creates conflicts between them. After a series of questionable choices that lead many to associate Daenerys with her father, the mad king, she slaughters King's Landing in the last battle of the last war. At this point, her council is greatly divided between supporting and confronting her. Daenerys meets her end one day after the final battle of the last war in the hands of her nephew Jon Snow."),
-  (24, 5, 21, 1, "Jon Snow", 1, "m", ""),
+  (24, 5, 21, 1, "Jon Snow", 1, "m", "Jon Snow was raised as a bastard son of Eddard (Ned) Stark. After the end of the Robert's rebellion, Ned came back home to Winterfell with a baby in his arms whom he called 'Jon'. At age of 14, Jon decided to serve the Night's Watch beside his uncle Benjen Stark. During a patrol beyond the wall, Jon is captured by wildlings and forced to kill the Eastwatch By-the-sea's lord commander Korin Half-hand to infiltrate the wildling band to spy on them. After returning to Castle Black, Jon was seen by many as a traitor of the watch. After the attack of the wildlings on the wall, Jon is choosen as successor to Jeor Mormont as lord commander of Castle Black. However, aknowledging the threat of the white walkers beyond the wall, Jon chooses to let the free folks to go south of the wall to seek refuge, which is seen by many as a treacherous and unforgivable act. This situation led to a rebellion where Jon is betrayed and killed by his own men. Jon is then ressurected by Melisandre of Asshai with the power of R'hllor. Jon had then completed his vows of serving the Night's Watch until his death and decides to march south with his sister Sansa to take back his family's castle Winterfell from Ramsey Bolton. With the combined force of the free folks, some northerners men, the remaining Stannis Baratheon's men and the knights of the vale, Jon Snow wins the battle of the bastards and became lord of Winterfell to later be named king in the north by the northerners lords. Aware of the army of the dead marching south, Jon travels to Dragonstone to meet Daenerys Targaryen and asks for her help to fight the war which she agrees to do. Returning to Winterfell, Jon learns about his true lineage as son of Rhaegar Targaryen and Lyanna Stark and that he is therefore the rightfull heir to the throne. After Daenerys slaughters King's Landing in an act o cruelty, Jon sees himself forced to stop her tirany and kills her at the throne room in King's Landing. For murdering the queen, some demanded Jon's execution but the Starks interveined in his favor and managed to send him to the Night's Watch where he would live again the rest of his days."),
   (25, NULL, NULL, 5, "Tytos Lannister", 0, "m", ""),
-  (26, NULL, 25, 5, "Tywin Lannister", 0, "m", ""),
+  (26, NULL, 25, 5, "Tywin Lannister", 0, "m", "Lord of Casterly Rock and father of three children, Tywin Lannister was the hand of the king Aerys II Targaryen. During the rebellion, Tywin realizes that Aerys would loose the war and changes sides betraying his king and attacking King's Landing from inside the gates. Tywin is once again named hand of the king when his grandson Joffrey is crowned king and continues as hand in his second grandson, Tommem is crowned following his brother's death. Tywin is killed in his room by his son Tyrion Lannister with a crossbow."),
   (27, NULL, NULL, 5, "Joanna Lannister", 0, "f", ""),
   (28, NULL, 25, 5, "Kevan Lannister", 0, "m", ""),
   (29, 27, 26, 5, "Cersei Lannister", 0, "f", ""),
@@ -151,7 +152,8 @@ VALUES
   (94, NULL, NULL, 9, "Ellaria Sand", 0, "f", ""),
   (95, 94, 90, 9, "Obara Sand", 0, "f", ""),
   (96, 94, 90, 9, "Nymeria Sand", 0, "f", ""),
-  (97, 94, 90, 9, "Tyene Sand", 0, "f", "");
+  (97, 94, 90, 9, "Tyene Sand", 0, "f", ""),
+  (98, NULL, NULL, 8, "Joe Jonas", 1, "m", "");
 
 -- CASTLES
 INSERT INTO castles (id, region_id, name)
@@ -200,7 +202,8 @@ VALUES
   (63, 59, 0),
   (69, 72, 1),
   (78, 81, 0),
-  (82, 83, 1);
+  (82, 83, 1),
+  (98, 12, 1);
 
 -- NOBLES
 INSERT INTO nobles (id, person_id)
@@ -214,7 +217,7 @@ VALUES
   (61, 61), (62, 62), (63, 63), (64, 64), (65, 65), (66, 66), (67, 67), (68, 68), (69, 69), (70, 70),
   (71, 71), (72, 72), (73, 73), (74, 74), (75, 75), (76, 76), (77, 77), (78, 78), (79, 79), (80, 80),
   (81, 81), (82, 82), (83, 83), (84, 84), (85, 85), (86, 86), (87, 87), (88, 88), (89, 89), (90, 90),
-  (91, 91), (92, 92), (93, 93);
+  (91, 91), (92, 92), (93, 93), (94, 98);
 
 -- LORDS
 INSERT INTO lords (id, noble_id, heir_id)
@@ -385,7 +388,8 @@ VALUES
   (90, 19),
   (91, 19),
   (92, 3), (92, 19),
-  (93, 3), (93, 19);
+  (93, 3), (93, 19),
+  (94, 27);
 
 -- REIGNS
 INSERT INTO reigns (id, king_id, kingdom_id, is_current_ruler)
