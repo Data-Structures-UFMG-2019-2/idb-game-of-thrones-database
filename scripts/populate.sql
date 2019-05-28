@@ -132,23 +132,23 @@ VALUES
   (74, 72, 69, 2, "Maron Greyjoy", 0, "m", ""),
   (75, 72, 69, 2, "Theon Greyjoy", 0, "m", ""),
   (76, 72, 69, 2, "Yara Greyjoy", 1, "f", ""),
-  (77, NULL, NULL, 1, "Jeor Mormont", 0, "m", ""),
-  (78, NULL, 77, 1, "Jorah Mormont", 0, "m", ""),
+  (77, NULL, NULL, 1, "Jeor Mormont", 0, "m", "The lord commander of the Night's Watch, Jeor Mormont is betrayed and killed by his own men during a patrol beyond the wall."),
+  (78, NULL, 77, 1, "Jorah Mormont", 0, "m", "The lord of Mormont Keep and the Bear Island, Sor Jorah Mormont was sentenced to death for trading slaves but he fled Westeros and seek life as a mercenary on the free cities of Essos eventually entering service of Daenerys Targaryen. At first he trades info about the young Targaryen with the Westeros crown for a royal pardon, but he soon regrets his decision and chooses to remain loyal to Daenerys. When Daenerys learns about his role as a royal spy, she expels him of her service and exiles him from Mereen, a city that she currently rules in Essos. However, after a series of events, Jorah brings Tyrion Lannister as a gift for Daenerys and saves her life in an attack of the sons of the Harpy. Daenerys forgives him for his treason but then learns that he is infected with a mortal desease called greyscale. She commands Jorah to find a cure and return to her service, he then sails to the citadel in Westeros to seek for help from the meisters where he is cured by Samwell Tarly. He returns to serve Daenerys service and dies protecting her during the great war."),
   (79, NULL, NULL, 1, "Maege Mormont", 0, "f", ""),
-  (80, 79, NULL, 1, "Lyanna Mormont", 0, "f", ""),
+  (80, 79, NULL, 1, "Lyanna Mormont", 0, "f", "Lyanna Mormont was made lady of Mormont Keep in a very young age. The relentless lady was killed by a walker giant during the great war against the White Walkers."),
   (81, NULL, NULL, 6, "Lynesse Hightower", 0, "f", ""),
-  (82, NULL, NULL, 6, "Randyll Tarly", 0, "m", ""),
+  (82, NULL, NULL, 6, "Randyll Tarly", 0, "m", "Lord of Horn Hill and father of three children, Randyll Tarly was executed by Daenerys Targaryen when he refused to bend the knee after the Lannister army ir caught by surprise when returning to King's Landing after the assault of Highgarden."),
   (83, NULL, NULL, 6, "Melessa Tarly", 1, "f", ""),
-  (84, 83, 82, 6, "Samwell Tarly", 1, "m", ""),
+  (84, 83, 82, 6, "Samwell Tarly", 1, "m", "The elder son of Randyll Tarly and heir of Horn Hill, Samwell (Sam) Tarly was sent to the Night's Watch at his young age. After serving a few years and following the death of Aemon Targaryen, Sam is sent to the citadel to become a meister and then return to Castle Black to take the place left by meister Aemon. However, Sam breaks both his Night's Watch and meister vows when she decides to abbandon the citadel and head to Winterfell to fight the White Walkers besides Jon Snow and the other men. Afther the war is won, and at the end of the last war, king Brandon forgives him for his broken vows and makes him the grand meister of King's Landing."),
   (85, 83, 82, 6, "Talla Tarly", 1, "f", ""),
   (86, 83, 82, 6, "Dickon Tarly", 0, "m", ""),
   (87, NULL, NULL, 9, "Lewyn Martell", 0, "m", ""),
   (88, NULL, 87, 9, "Doran Martell", 0, "m", ""),
-  (89, NULL, 87, 9, "Elia Martell", 0, "f", ""),
-  (90, NULL, 87, 9, "Oberyn Martell", 0, "m", ""),
+  (89, NULL, 87, 9, "Elia Martell", 0, "f", "Wife of the prince Rhaegar, and thus, princess of the seven kingdoms, Elia Martell was murdered by Gregor Clegane at the end of Robert's rebellion."),
+  (90, NULL, 87, 9, "Oberyn Martell", 0, "m", "Oberyn was the brother of the prince of Dorne, Doran Martell and the princess of the seven kingdoms, Elia Martell. After the murder of his sister and nephews, Oberyn and his bastard daughters spent years plaining their vengeance against Gregor Clegane, Tywin Lannister and Robert Baratheon. When Tyrion Lannister is charged for the murder of King Joffrey and demmand a trial by combat, Oberyn learns that the court's champion would be Gregor Clegane and sees this as an opportunity to have his vengeance by lawfull means. Oberyn is killed in combat with Gregor, but his poisoned spear ends up killing Gregor all together."),
   (91, NULL, 88, 9, "Trystane Martell", 0, "m", ""),
-  (92, 89, 21, 9, "Rhaenys Targaryen", 0, "f", ""),
-  (93, 89, 21, 9, "Aegon Targaryen", 0, "m", ""),
+  (92, 89, 21, 9, "Rhaenys Targaryen", 0, "f", "Rhaenys was the baby daughter of Rhaegar Targaryen and Elia Martell. She was murderd by Gregor Clegane under the orders of Lord Tywin Lannister atthe end of Robert's rebellion."),
+  (93, 89, 21, 9, "Aegon Targaryen", 0, "m", "Aegon was the the baby son of Rhaegar Targaryen and Elia Martell and the heir to the iron throne after his father. He was murderd by Gregor Clegane under the orders of Lord Tywin Lannister atthe end of Robert's rebellion."),
   (94, NULL, NULL, 9, "Ellaria Sand", 0, "f", ""),
   (95, 94, 90, 9, "Obara Sand", 0, "f", ""),
   (96, 94, 90, 9, "Nymeria Sand", 0, "f", ""),
@@ -274,7 +274,8 @@ VALUES
   (51, 70, NULL),
   (52, 46, NULL),
   (53, 6, 7),
-  (54, 29, NULL);
+  (54, 29, NULL),
+  (55, 23, NULL);
 
 -- KINGS
 INSERT INTO kings (id, noble_id, heir_id)
@@ -290,7 +291,8 @@ VALUES
   (9, 39, NULL),
   (10, 40, NULL),
   (11, 23, NULL),
-  (12, 13, NULL);
+  (12, 13, NULL),
+  (13, 23, NULL);
 
 -- INHERITANCES
 INSERT INTO inheritances (noble_id, house_id)
@@ -405,7 +407,8 @@ VALUES
   (9, 9, 1, 0),
   (10, 10, 1, 0),
   (11, 11, 1, 0),
-  (12, 12, 1, 1);
+  (12, 12, 1, 1),
+  (13, 13, 1, 0);
 
 -- LORDS CASTLES
 INSERT INTO lords_castles (id, lord_id, castle_id, is_current_ruler)
@@ -457,4 +460,6 @@ VALUES
   (45, 50, 11, 1),
   (46, 51, 11, 0),
   (47, 52, 6, 0),
-  (48, 54, 18, 0);
+  (48, 54, 18, 0),
+  (59, 55, 3, 0),
+  (60, 55, 18, 0);
