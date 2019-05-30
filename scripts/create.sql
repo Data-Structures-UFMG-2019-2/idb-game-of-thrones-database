@@ -1,3 +1,4 @@
+DROP DATABASE IF EXISTS a_game_of_thrones;
 CREATE DATABASE IF NOT EXISTS a_game_of_thrones;
 USE a_game_of_thrones
 
@@ -204,3 +205,16 @@ ON small_lords(lord_id);
 
 CREATE INDEX small_lord_sovereign
 ON small_lords(sovereign_id);
+
+CREATE TABLE IF NOT EXISTS wardens (
+  lord_id INT NOT NULL,
+  region_id INT NOT NULL,
+  rule_begin_date DATE,
+  rule_end_date DATE,
+  is_current_ruler BOOLEAN NOT NULL,
+  PRIMARY KEY (lord_id, region_id),
+  CONSTRAINT fk_wardens_lord FOREIGN KEY (lord_id)
+  REFERENCES great_lords(id),
+  CONSTRAINT fk_wardens_region FOREIGN KEY (region_id)
+  REFERENCES regions(id)
+);
