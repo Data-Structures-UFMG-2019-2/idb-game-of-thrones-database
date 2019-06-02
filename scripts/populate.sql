@@ -133,7 +133,7 @@ VALUES
   (75, 72, 69, 2, "Theon Greyjoy", 0, "m", ""),
   (76, 72, 69, 2, "Yara Greyjoy", 1, "f", ""),
   (77, NULL, NULL, 1, "Jeor Mormont", 0, "m", "The lord commander of the Night's Watch, Jeor Mormont is betrayed and killed by his own men during a patrol beyond the wall."),
-  (78, NULL, 77, 1, "Jorah Mormont", 0, "m", "The lord of Mormont Keep and the Bear Island, Sor Jorah Mormont was sentenced to death for trading slaves but he fled Westeros and seek life as a mercenary on the free cities of Essos eventually entering service of Daenerys Targaryen. At first he trades info about the young Targaryen with the Westeros crown for a royal pardon, but he soon regrets his decision and chooses to remain loyal to Daenerys. When Daenerys learns about his role as a royal spy, she expels him of her service and exiles him from Mereen, a city that she currently rules in Essos. However, after a series of events, Jorah brings Tyrion Lannister as a gift for Daenerys and saves her life in an attack of the sons of the Harpy. Daenerys forgives him for his treason but then learns that he is infected with a mortal desease called greyscale. She commands Jorah to find a cure and return to her service, he then sails to the citadel in Westeros to seek for help from the meisters where he is cured by Samwell Tarly. He returns to serve Daenerys service and dies protecting her during the great war."),
+  (78, NULL, 77, 1, "Jorah Mormont", 0, "m", "The lord of Mormont Keep and the Bear Island, SerJorah Mormont was sentenced to death for trading slaves but he fled Westeros and seek life as a mercenary on the free cities of Essos eventually entering service of Daenerys Targaryen. At first he trades info about the young Targaryen with the Westeros crown for a royal pardon, but he soon regrets his decision and chooses to remain loyal to Daenerys. When Daenerys learns about his role as a royal spy, she expels him of her service and exiles him from Mereen, a city that she currently rules in Essos. However, after a series of events, Jorah brings Tyrion Lannister as a gift for Daenerys and saves her life in an attack of the sons of the Harpy. Daenerys forgives him for his treason but then learns that he is infected with a mortal desease called greyscale. She commands Jorah to find a cure and return to her service, he then sails to the citadel in Westeros to seek for help from the meisters where he is cured by Samwell Tarly. He returns to serve Daenerys service and dies protecting her during the great war."),
   (79, NULL, NULL, 1, "Maege Mormont", 0, "f", ""),
   (80, 79, NULL, 1, "Lyanna Mormont", 0, "f", "Lyanna Mormont was made lady of Mormont Keep in a very young age. The relentless lady was killed by a walker giant during the great war against the White Walkers."),
   (81, NULL, NULL, 6, "Lynesse Hightower", 0, "f", ""),
@@ -180,30 +180,29 @@ VALUES
 -- MARRIAGES
 INSERT INTO marriages (husband_id, wife_id, still_married)
 VALUES
-  (3, 10, 1),
-  (21, 5, 1),
-  (6, 7, 1),
-  (8, 9, 1),
-  (17, 18, 1),
-  (26, 27, 1),
-  (38, 29, 1),
-  (33, 49, 0),
-  (35, 49, 1),
-  (36, 37, 1),
-  (39, 43, 1),
-  (40, 49, 0),
-  (45, 46, 1),
-  (47, 48, 1),
-  (56, 55, 1),
-  (58, 12, 0),
-  (31, 12, 0),
-  (57, 12, 0),
-  (60, 61, 1),
-  (63, 59, 0),
-  (69, 72, 1),
-  (78, 81, 0),
-  (82, 83, 1),
-  (98, 12, 1);
+  (3, 10, 1),   -- Ned and Catelyn
+  (21, 5, 1),   -- Rhaegar and Lyanna
+  (6, 7, 1),    -- Robbyrt and Sansa Lefford
+  (8, 9, 1),    -- Hoster and Minisa
+  (17, 18, 1),  -- Aerys II and Rhaella
+  (26, 27, 1),  -- Tywin and Joanna
+  (38, 29, 1),  -- Robert and Cersei
+  (33, 49, 0),  -- Joffrey and Margaery
+  (35, 49, 1),  -- Tommem and Margaery
+  (36, 37, 1),  -- Steffon and Cassana
+  (39, 43, 1),  -- Stannis and Selyse
+  (40, 49, 0),  -- Renly and Margaery
+  (45, 46, 1),  -- Luthor and Olenna
+  (47, 48, 1),  -- Mace and Alerie
+  (56, 55, 1),  -- Roose Bolton and Walda
+  (57, 12, 0),  -- Ramsey and Sansa Stark
+  (31, 12, 0),  -- Tyrion and Sansa Stark
+  (60, 61, 1),  -- Edmure and Roslin
+  (63, 59, 0),  -- Jon Arryn and Lysa
+  (69, 72, 1),  -- Balon and Alannys
+  (78, 81, 0),  -- Jorah and Lynesse
+  (82, 83, 1),  -- Randyll and Melessa
+  (98, 12, 1);  -- Joe Jonas and Sansa Stark
 
 -- NOBLES
 INSERT INTO nobles (id, person_id)
@@ -222,60 +221,111 @@ VALUES
 -- LORDS
 INSERT INTO lords (id, noble_id, heir_id)
 VALUES
-  (1, 1, 2),
-  (2, 2, 3),
-  (3, 3, 11),
-  (4, 11, 13),
-  (5, 13, 12),
-  (6, 12, NULL),
-  (7, 8, 58),
-  (8, 58, 60),
-  (9, 60, NULL),
-  (10, 16, 17),
-  (11, 17, 19),
-  (12, 19, 20),
-  (13, 20, 21),
-  (14, 21, 22),
-  (15, 22, NULL),
-  (16, 25, 26),
-  (17, 26, 28),
-  (19, 28, 31),
-  (20, 31, NULL),
-  (21, 36, 38),
-  (22, 39, 40),
-  (23, 40, NULL),
-  (24, 41, NULL),
-  (25, 82, 86),
-  (26, 86, 85),
-  (27, 85, NULL),
-  (28, 45, 47),
-  (29, 47, 50),
-  (30, 50, NULL),
-  (31, 51, 52),
-  (32, 52, 53),
-  (33, 53, 54),
-  (34, 54, NULL),
-  (35, 56, 57),
-  (36, 57, NULL),
-  (37, 62, 63),
-  (38, 63, 66),
-  (39, 66, NULL),
-  (40, 79, 80),
-  (41, 80, NULL),
-  (42, 77, NULL),
-  (43, 24, NULL),
-  (44, 38, 33),
-  (45, 33, 35),
-  (46, 35, NULL),
-  (47, 87, 88),
-  (48, 88, 91),
-  (49, 69, 76),
-  (50, 76, NULL),
-  (51, 70, NULL),
-  (52, 46, NULL),
-  (53, 6, 7),
-  (54, 29, NULL),
-  (55, 23, NULL);
+  (1, 1, 3),      -- Rickard Stark
+  (3, 3, 11),     -- Ned Stark
+  (4, 11, 13),    -- Robb Stark
+  (5, 13, 12),    -- Brandon Stark
+  (6, 12, NULL),  -- Sansa Stark
+  (7, 8, 58),     -- Hoster Tully
+  (8, 58, 60),    -- Brynden Tully
+  (9, 60, NULL),  -- Edmure Tully
+  (10, 16, 17),   -- Aegon V Targaryen
+  (11, 17, 19),   -- Aerys II Targaryen
+  (12, 19, 20),   -- Duncan Targaryen
+  (13, 20, 21),   -- Daeron Targaryen
+  (14, 21, 22),   -- Rhaegar Targaryen
+  (16, 25, 26),   -- Tytos Lannister
+  (17, 26, 28),   -- Tywin Lannister
+  (19, 28, 31),   -- Kevan Lannister
+  (20, 31, NULL), -- Tyrion Lannister
+  (21, 36, 38),   -- Steffon Baratheon
+  (22, 39, 40),   -- Stannis Baratheon
+  (23, 40, NULL), -- Renly Baratheon
+  (24, 41, NULL), -- Gendry Baratheon
+  (25, 82, 86),   -- Randyll Tarly
+  (27, 85, NULL), -- Talla Tarly
+  (28, 45, 47),   -- Luthor Tyrell
+  (29, 47, 50),   -- Mace Tyrell
+  (31, 51, 52),   -- Walder Frey
+  (35, 56, 57),   -- Roose Bolton
+  (36, 57, NULL), -- Ramsey Bolton
+  (37, 62, 63),   -- Jasper Arryn
+  (38, 63, 66),   -- Jon Arryn
+  (39, 66, NULL), -- Robin Arryn
+  (40, 79, 80),   -- Maege Mormont
+  (41, 80, NULL), -- Lyanna Mormont
+  (42, 77, NULL), -- Jeor Mormont
+  (43, 24, NULL), -- Jon Snow
+  (44, 38, 33),   -- Robert Baratheon
+  (45, 33, 35),   -- Joffrey Lannister
+  (46, 35, NULL), -- Tommem Lannister
+  (47, 87, 88),   -- Lewyn Martell
+  (48, 88, 91),   -- Doran Martell
+  (49, 69, 76),   -- Balon Greyjoy
+  (50, 76, NULL), -- Yara Greyjoy
+  (51, 70, NULL), -- Euron Greyjoy
+  (52, 46, NULL), -- Olenna Redwyne
+  (53, 6, 7),     -- Robbyrt Tully
+  (54, 29, NULL), -- Cersei Lannister
+  (55, 23, NULL), -- Daenerys Targaryen
+  (56, 78, NULL); -- Jorah Mormont
+
+-- GREAT LORDS
+
+INSERT INTO great_lords(id, lord_id)
+VALUES
+  (1, 1),     -- Rickard Stark
+  (2, 3),     -- Ned Stark
+  (3, 4),     -- Robb Stark
+  (4, 5),     -- Brandon Stark
+  (5, 6),     -- Sansa Stark
+  (6, 53),    -- Robbyrt Tully
+  (7, 7),     -- Hoster Tully
+  (8, 8),     -- Brynden Tully
+  (9, 9),     -- Edmure Tully
+  (10, 10),   -- Aegon V Targaryen
+  (11, 11),   -- Aerys Targaryen
+  (12, 12),   -- Duncan Targaryen
+  (13, 13),   -- Daeron Targaryen
+  (14, 14),   -- Rhaegar Targaryen
+  (16, 16),   -- Tytos Lannister
+  (17, 17),   -- Tywin Lannister
+  (19, 19),   -- Kevan Lannister
+  (20, 20),   -- Tyrion Lannister
+  (21, 21),   -- Steffon Baratheon
+  (22, 22),   -- Stannis Baratheon
+  (23, 23),   -- Renly Baratheon
+  (24, 24),   -- Gendry Baratheon
+  (25, 28),   -- Luthor Tyrell
+  (26, 29),   -- Mace Tyrell
+  (27, 35),   -- Roose Bolton
+  (28, 36),   -- Ramsey Bolton
+  (29, 37),   -- Jasper Arryn
+  (30, 38),   -- Jon Arryn
+  (31, 39),   -- Robin Arryn
+  (32, 43),   -- Jon Snow
+  (33, 44),   -- Robert Baratheon
+  (34, 45),   -- Joffrey Lannister
+  (35, 46),   -- Tommem Lannister
+  (36, 47),   -- Lewyn Martell
+  (37, 48),   -- Doran Martell
+  (38, 49),   -- Balon Greyjoy
+  (39, 50),   -- Yara Greyjoy
+  (40, 51),   -- Euron Greyjoy
+  (41, 52),   -- Olenna Redwyne
+  (42, 53),   -- Robbyrt Tully
+  (43, 54),   -- Cersei Lannister
+  (44, 55),   -- Daenerys Targaryen
+  (45, 42);   -- Jeor Mormont
+
+-- SMALL LORDS
+INSERT INTO small_lords(id, lord_id, sovereign_id)
+VALUES
+  (1, 25, 26),  -- Randyll Tarly vassal of Mace Tyrell
+  (2, 27, 4),   -- Talla Tarly vassal of Brandon Stark
+  (3, 31, 7),   -- Walder Frey vassal of Hoster Tully
+  (4, 40, 5),   -- Maege Mormont vassal of Sansa Stark
+  (5, 41, 32);  -- Lyanna Mormont vassal of Jon Snow
 
 -- KINGS
 INSERT INTO kings (id, noble_id, heir_id)
@@ -463,3 +513,12 @@ VALUES
   (48, 54, 18, 0),
   (59, 55, 3, 0),
   (60, 55, 18, 0);
+
+-- KINGHTS
+INSERT INTO knights(id, person_id, sworn_to)
+VALUES
+  (1, 30, NULL),
+  (2, 50, 40),
+  (3, 67, 21),
+  (4, 68, 21),
+  (5, 78, 38);
