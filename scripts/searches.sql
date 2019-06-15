@@ -120,6 +120,21 @@ ON people.id = nobles.person_id
 WHERE lords_castles.is_current_ruler = 1
 ORDER BY castle_name;
 
+-- Get the current warden of each region
+SELECT people.name AS warden_name, regions.name AS region_name
+FROM people
+JOIN nobles
+ON nobles.person_id = people.id
+JOIN lords
+ON lords.noble_id = nobles.id
+JOIN great_lords
+ON great_lords.lord_id = lords.id
+JOIN wardens
+ON wardens.lord_id = great_lords.id
+JOIN regions
+ON regions.id = wardens.region_id
+ORDER BY region_name;
+
 -- Get every king and the kingdom he ruled
 SELECT people.name AS king_name, kingdoms.name AS kingdom_name, reigns.is_current_ruler
 FROM kingdoms

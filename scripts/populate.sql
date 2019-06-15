@@ -317,6 +317,55 @@ VALUES
   (43, 55),   -- Daenerys Targaryen
   (44, 42);   -- Jeor Mormont
 
+-- WARDENS
+INSERT INTO wardens(lord_id, region_id, is_current_ruler)
+VALUES
+  (1, 1, 0),     -- Rickard Stark, The North
+  (2, 1, 0),     -- Ned Stark, The North
+  (3, 1, 0),     -- Robb Stark, The North
+  (4, 8, 1),     -- Brandon Stark, The Crownlands
+  (4, 1, 0),     -- Brandon Stark, The North
+  (5, 1, 1),     -- Sansa Stark, The North
+  (6, 3, 0),    -- Robbyrt Tully, Riverlands
+  (7, 3, 0),     -- Hoster Tully, Riverlands
+  (8, 3, 0),     -- Brynden Tully, Riverlands
+  (9, 3, 1),     -- Edmure Tully, Riverlands
+  (10, 8, 0),   -- Aegon V Targaryen, The Crownlands
+  (11, 8, 0),   -- Aerys Targaryen, The Crownlands
+  (12, 8, 0),   -- Duncan Targaryen, The Crownlands
+  (13, 8, 0),   -- Daeron Targaryen, The Crownlands
+  (14, 8, 0),   -- Rhaegar Targaryen, The Crownlands
+  (16, 5, 0),   -- Tytos Lannister, The Westerlands
+  (17, 5, 0),   -- Tywin Lannister, The Westerlands
+  (19, 5, 0),   -- Kevan Lannister, The Westerlands
+  (20, 5, 1),   -- Tyrion Lannister, The Westerlands
+  (21, 7, 0),   -- Steffon Baratheon, The Stormlands
+  (22, 7, 0),   -- Stannis Baratheon, The Stormlands
+  (23, 7, 0),   -- Renly Baratheon, The Stormlands
+  (24, 7, 1),   -- Gendry Baratheon, The Stormlands
+  (25, 6, 0),   -- Luthor Tyrell, The Reach
+  (26, 6, 0),   -- Mace Tyrell, The Reach
+  (27, 1, 0),   -- Roose Bolton, The North
+  (28, 1, 0),   -- Ramsey Bolton, The North
+  (29, 4, 0),   -- Jasper Arryn, The Vale
+  (30, 4, 0),   -- Jon Arryn, The Vale
+  (31, 4, 0),   -- Robin Arryn, The Vale
+  (32, 1, 0),   -- Jon Snow, The North
+  (32, 11, 1),   -- Jon Snow, The Gift
+  (33, 7, 0),   -- Robert Baratheon, The Stormlands
+  (33, 8, 0),   -- Robert Baratheon, The Crownlands
+  (34, 8, 0),   -- Joffrey Lannister, The Crownlands
+  (35, 8, 0),   -- Tommem Lannister, The Crownlands
+  (36, 9, 0),   -- Lewyn Martell, Dorne
+  (37, 9, 0),   -- Doran Martell, Dorne
+  (38, 2, 0),   -- Balon Greyjoy, The Iron Islands
+  (39, 2, 1),   -- Yara Greyjoy, The Iron Islands
+  (40, 2, 0),   -- Euron Greyjoy, The Iron Islands
+  (41, 6, 0),   -- Olenna Redwyne, The Reach
+  (42, 8, 0),   -- Cersei Lannister, The Crownlands
+  (43, 8, 0),   -- Daenerys Targaryen, The Crownlands
+  (44, 11, 0);  -- Jeor Mormont, The Gift
+
 -- SMALL LORDS
 INSERT INTO small_lords(id, lord_id, sovereign_id)
 VALUES
