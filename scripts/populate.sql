@@ -313,10 +313,9 @@ VALUES
   (39, 50),   -- Yara Greyjoy
   (40, 51),   -- Euron Greyjoy
   (41, 52),   -- Olenna Redwyne
-  (42, 53),   -- Robbyrt Tully
-  (43, 54),   -- Cersei Lannister
-  (44, 55),   -- Daenerys Targaryen
-  (45, 42);   -- Jeor Mormont
+  (42, 54),   -- Cersei Lannister
+  (43, 55),   -- Daenerys Targaryen
+  (44, 42);   -- Jeor Mormont
 
 -- SMALL LORDS
 INSERT INTO small_lords(id, lord_id, sovereign_id)
@@ -330,19 +329,18 @@ VALUES
 -- KINGS
 INSERT INTO kings (id, noble_id, heir_id)
 VALUES
-  (1, 38, 33),
-  (2, 33, 35),
-  (3, 35, NULL),
-  (4, 11, NULL),
-  (5, 12, NULL),
-  (6, 16, 17),
-  (7, 17, 21),
-  (8, 24, NULL),
-  (9, 39, NULL),
-  (10, 40, NULL),
-  (11, 23, NULL),
-  (12, 13, NULL),
-  (13, 23, NULL);
+  (1, 38, 33),    -- Robert Baratheon
+  (2, 33, 35),    -- Joffrey Lannister
+  (3, 35, NULL),  -- Tommem Lannister
+  (4, 11, NULL),  -- Robb Stark
+  (5, 12, NULL),  -- Sansa Stark
+  (6, 16, 17),    -- Aegon V Targaryen
+  (7, 17, 21),    -- Aerys II Targaryen
+  (8, 24, NULL),  -- Jon Snow
+  (9, 39, NULL),  -- Stannis Baratheon
+  (10, 40, NULL), -- Renly Baratheon
+  (11, 23, NULL), -- Daenerys Targaryen
+  (12, 13, NULL); -- Brandon Stark
 
 -- INHERITANCES
 INSERT INTO inheritances (noble_id, house_id)
@@ -446,79 +444,76 @@ VALUES
 -- REIGNS
 INSERT INTO reigns (id, king_id, kingdom_id, is_current_ruler)
 VALUES
-  (1, 1, 1, 0),
-  (2, 2, 1, 0),
-  (3, 3, 1, 0),
-  (4, 4, 3, 0),
-  (5, 5, 3, 1),
-  (6, 6, 1, 0),
-  (7, 7, 1, 0),
-  (8, 8, 3, 0),
-  (9, 9, 1, 0),
-  (10, 10, 1, 0),
-  (11, 11, 1, 0),
-  (12, 12, 1, 1),
-  (13, 13, 1, 0);
+  (1, 1, 1, 0),   -- Robert Baratheon, Six (seven at the time) Kingdoms
+  (2, 2, 1, 0),   -- Joffrey Lannister, Six (seven at the time) Kingdoms
+  (3, 3, 1, 0),   -- Tommem Lannister, Six (seven at the time) Kingdoms
+  (4, 4, 3, 0),   -- Robb Stark, The North
+  (5, 5, 3, 1),   -- Sansa Stark, The North
+  (6, 6, 1, 0),   -- Aegon V Targaryen, Six (seven at the time) Kingdoms
+  (7, 7, 1, 0),   -- Aerys II Targaryen, Six (seven at the time) Kingdoms
+  (8, 8, 3, 0),   -- Jon Snow, The North
+  (9, 9, 1, 0),   -- Stannis Baratheon, Six (seven at the time) Kingdoms
+  (10, 10, 1, 0), -- Renly Baratheon, Six (seven at the time) Kingdoms
+  (11, 11, 1, 0), -- Daenerys Targaryen, Six (seven at the time) Kingdoms
+  (12, 12, 1, 1); -- Brandon Stark, Six Kingdoms
 
 -- LORDS CASTLES
-INSERT INTO lords_castles (id, lord_id, castle_id, is_current_ruler)
+INSERT INTO lords_castles (lord_id, castle_id, is_current_ruler)
 VALUES
-  (1, 1, 1, 0),
-  (2, 2, 1, 0),
-  (3, 3, 1, 0),
-  (4, 4, 1, 0),
-  (5, 5, 18, 1),
-  (6, 6, 1, 1),
-  (7, 7, 2, 0),
-  (8, 9, 2, 1),
-  (9, 11, 3, 0),
-  (10, 12, 3, 0),
-  (11, 13, 3, 0),
-  (12, 17, 4, 0),
-  (13, 19, 4, 0),
-  (14, 20, 4, 1),
-  (15, 21, 5, 0),
-  (16, 22, 5, 0),
-  (17, 23, 5, 0),
-  (18, 24, 5, 1),
-  (19, 25, 13, 0),
-  (20, 26, 13, 0),
-  (21, 27, 13, 1),
-  (22, 28, 6, 0),
-  (23, 29, 6, 0),
-  (24, 31, 2, 0),
-  (25, 31, 7, 0),
-  (26, 35, 9, 0),
-  (27, 36, 1, 0),
-  (28, 37, 10, 0),
-  (29, 53, 2, 0),
-  (30, 44, 5, 0),
-  (31, 44, 18, 0),
-  (32, 36, 9, 0),
-  (33, 38, 10, 0),
-  (34, 39, 10, 1),
-  (35, 40, 12, 0),
-  (36, 41, 12, 0),
-  (37, 42, 15, 0),
-  (38, 43, 1, 0),
-  (39, 43, 15, 1),
-  (40, 45, 18, 0),
-  (41, 46, 18, 0),
-  (42, 47, 14, 0),
-  (43, 48, 14, 0),
-  (44, 49, 11, 0),
-  (45, 50, 11, 1),
-  (46, 51, 11, 0),
-  (47, 52, 6, 0),
-  (48, 54, 18, 0),
-  (59, 55, 3, 0),
-  (60, 55, 18, 0);
+  (1, 1, 0),    -- Rickard Stark, Winterfell
+  (3, 1, 0),    -- Eddard Stark, Winterfell
+  (4, 1, 0),    -- Robb Stark, Winterfell
+  (5, 18, 1),   -- Brandon Stark, Red Keep
+  (6, 1, 1),    -- Sansa Stark, Winterfell
+  (7, 2, 0),    -- Hoster Tully, Riverrun
+  (9, 2, 1),    -- Edmure Tully, Riverrun
+  (11, 3, 0),   -- Aerys II Targaryen, Dragonstone
+  (12, 3, 0),   -- Duncan Targaryen, Dragonstone
+  (13, 3, 0),   -- Daeron Targaryen, Dragonstone
+  (17, 4, 0),   -- Tywin Lannister, Casterly Rock
+  (19, 4, 0),   -- Kevan Lannister, Casterly Rock
+  (20, 4, 1),   -- Tyrion Lannister, Casterly Rock
+  (21, 5, 0),   -- Steffon Baratheon, Storm's End
+  (22, 5, 0),   -- Stannis Baratheon, Storm's End
+  (23, 5, 0),   -- Renly Baratheon, Storm's End
+  (24, 5, 1),   -- Gendry Baratheon, Storm's End
+  (25, 13, 0),  -- Randyll Tarly, Horn Hill
+  (27, 13, 1),  -- Talla Tarly, Horn Hill
+  (28, 6, 0),   -- Luthor Tyrell, Highgarden
+  (29, 6, 0),   -- Mace Tyrell, Highgarden
+  (31, 2, 0),   -- Walder Frey, Riverrun
+  (31, 7, 0),   -- Walder Frey, The Twins
+  (35, 9, 0),   -- Roose Bolton, Dreadfort
+  (36, 1, 0),   -- Ramsey Bolton, Winterfell
+  (37, 10, 0),  -- Jasper Arryn, The Eyrie
+  (53, 2, 0),   -- Robbyrt Tully, Riverrun
+  (44, 5, 0),   -- Robert Baratheon, Storm's End
+  (44, 18, 0),  -- Robert Baratheon, Red Keep
+  (36, 9, 0),   -- Ramsey Bolton, Dreadfort
+  (38, 10, 0),  -- Jon Arryn, The Eyrie
+  (39, 10, 1),  -- Robin Arryn, The Eyrie
+  (40, 12, 0),  -- Maege Mormont, Mormont Keep
+  (41, 12, 0),  -- Lyanna Mormont, Mormont Keep
+  (42, 15, 0),  -- Jeor Mormont, Castle Black
+  (43, 1, 0),   -- Jon Snow, Winterfell
+  (43, 15, 1),  -- Jon Snow, Castle Black
+  (45, 18, 0),  -- Joffrey Lannister, Red Keep
+  (46, 18, 0),  -- Tommem Lannister, Red Keep
+  (47, 14, 0),  -- Lewyn Martell, Sunspear
+  (48, 14, 0),  -- Doran Martell, Sunspear
+  (49, 11, 0),  -- Balon Greyjoy, Pyke
+  (50, 11, 1),  -- Yara Greyjoy, Pyke
+  (51, 11, 0),  -- Euron Greyjoy, Pyke
+  (52, 6, 0),   -- Olenna Redwyne, Highgarden
+  (54, 18, 0),  -- Cersei Lannister, Red Keep
+  (55, 3, 0),   -- Daenerys Targaryen, Dragonstone
+  (55, 18, 0);  -- Daenerys Targaryen, Red Keep
 
 -- KINGHTS
 INSERT INTO knights(id, person_id, sworn_to)
 VALUES
-  (1, 30, NULL),
-  (2, 50, 40),
-  (3, 67, 21),
-  (4, 68, 21),
-  (5, 78, 38);
+  (1, 30, NULL),  -- Jaime Lannister
+  (2, 50, 40),    -- Loras Tyrell, sworn to Renly Baratheon
+  (3, 67, 21),    -- Gregor Clegane, sworn to Rhaegar Targaryen
+  (4, 68, 21),    -- Sandor Clegane, sworn to Rhaegar Targaryen
+  (5, 78, 38);    -- Jorah Mormont, sworn to Robert Baratheon

@@ -185,7 +185,7 @@ CREATE TABLE IF NOT EXISTS great_lords (
   REFERENCES lords(id)
 );
 
-CREATE UNIQUE INDEX grat_lord_lord
+CREATE UNIQUE INDEX great_lord_lord
 ON great_lords(lord_id);
 
 -- Create small_lord

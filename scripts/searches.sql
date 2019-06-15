@@ -57,7 +57,7 @@ JOIN regions
 ON people.region_id = regions.id
 WHERE people.is_alive = 1;
 
--- Get every married couple and their number of sons
+-- Get every married couple and their number of children
 SELECT husbands.name AS father_name, wives.name AS mother_name, count(children.id) AS children_number
 FROM (
   SELECT people.id, people.name, marriages.wife_id
@@ -80,7 +80,7 @@ ON children.father_id = husbands.id AND children.mother_id = wives.id
 GROUP BY husbands.id, wives.id
 ORDER BY children_number DESC;
 
--- Get the id, name and number of sons of each person with at least one son
+-- Get the id, name and number of children of each person with at least one children
 SELECT people.id, people.name, count(children.id) AS children_number
 FROM people
 LEFT JOIN (
